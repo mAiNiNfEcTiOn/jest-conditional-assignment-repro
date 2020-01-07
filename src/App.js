@@ -1,10 +1,15 @@
+import classnames from 'classnames';
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function App({ test }) {
+  const myClassName = {
+    [test]: test === 'yeah'
+  };
+
   return (
-    <div className="App">
+    <div className={classnames('App', myClassName)}>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
